@@ -1,0 +1,20 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE workers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(150) NOT NULL,
+    age INT NOT NULL,
+    job VARCHAR(150) NOT NULL,
+    certificate VARCHAR(255),
+    references_info TEXT,
+    location VARCHAR(150) NOT NULL,
+    phone VARCHAR(30) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
